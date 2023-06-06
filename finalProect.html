@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
+	<title>Besoft Food</title>
+	<style>
+		body{
+			margin: 0px;
+			padding: 0px;
+		}
+		h1, h2, h3, h4, h5, h6{
+			margin: 0px;
+			padding: 0px;
+		}
+	.Main_div{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+	}
+		.header{
+			width: 100%;
+			height: 100vh;
+			background: black;
+			color: white;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+		}
+		.header_h1{
+			font-size: 90px;
+			font-family: 'Roboto Mono', monospace ;
+			font-weight: lighter;
+			display: flex;
+			align-items: center;
+			position: relative;
+			overflow: hidden;
+			word-spacing: 50px;
+		}
+		.header_h5{
+			font-size: 50px;
+			margin-top: 20px;
+			font-family: 'Roboto Mono', monospace;
+			font-weight: 400;
+			word-spacing: 2px;
+			color: black;
+			animation: besoft 3s 1 3s forwards;
+		}
+		.header_h1_span{
+			animation: besoft 4s;
+			margin-right: 35px;
+		}
+		.header_h1_div{
+			height: 100px;
+			width: 300px;
+			background: black;
+			position: absolute;
+			left: 320px;
+			animation: header_h1_div 3s 1 1.2s linear forwards;
+		}
+		.header_h1_div_img{
+			width: 203px;
+			height: 203px;
+			background: white;
+			border-radius: 50%;	
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			top: 650px;
+		}
+		.header_h1_div_img_img{
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+			animation-name: header_h1_div_img_rotate;
+			animation-duration: 7s;
+			animation-timing-function: linear;
+			animation-iteration-count: infinite;
+		}
+		.section_menu{
+			display: flex;
+			gap: 30px;
+			flex-wrap: wrap;
+			margin-top: 150px;
+			align-items: center;
+			justify-content: center;
+		}
+		.menu_card{
+			width: 500px;
+			height: 600px;
+			border: 1px solid black ;	
+			position: relative;
+			overflow: hidden;
+			display: flex;
+		}
+		.menu_card_div_img{
+			width: 250px;
+		}
+		.menu_img{
+			width: 500px;
+			height: 600px;
+			position: absolute;
+			right: 250px;
+		}
+		.menu_card_section2{
+			width: 250px;
+			display: flex;
+			flex-direction: column;
+			position: relative;
+		}
+		
+		.menu_card_section2-button{
+			width: 150px;
+			height: 30px;
+			border-radius: 15px;
+			background: blue;
+			color: white;
+			border: none;
+			position: absolute;
+			bottom: 10px;
+		}
+		 
+
+
+		@keyframes header_h1_div {
+			0%{
+				left: 370px;
+			}
+			100%{
+				left: 650px;
+			}
+		}
+		@keyframes besoft {
+			0%{
+				color: black;
+			}
+			100%{
+				color: white;
+			}
+		}
+		@keyframes header_h1_div_img_rotate {
+			0%{
+				transform: rotate(0deg);
+			}
+			100%{
+				transform: rotate(360deg);
+			}
+		}
+		@media screen and (max-width: 480px) {
+			.header_h1{
+				font-size: 40px;
+			}
+			.header_h1_div{
+				width: 130px;
+				height: 50px;
+				position: absolute;
+				left: 270px;
+				animation-name: header_h1_divformobile;
+				animation-duration: 3s;
+				animation-timing-function: linear;
+			}
+			.header_h5{
+				font-size: 20px;
+			}
+
+
+
+			@keyframes header_h1_divformobile{
+				0%{
+					left: 150px;
+				}
+				100%{
+					left: 270px;
+				}
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="Main_div">
+		<div class="header">
+			<h1 class="header_h1">
+				<span class="header_h1_span">Besoft</span> <span>Food</span>
+				<div class="header_h1_div"></div>
+			</h1>
+			<h5 class="header_h5">
+				Доставка еды: роллы, суши, пицца
+			</h5>
+			<div class="header_h1_div_img">
+				<img src="https://pizza-percy.ru/wp-content/uploads/2019/06/tsezar.jpg" alt="" class="header_h1_div_img_img">
+			</div>
+		</div>
+		<div class="section_menu">
+			<div class="menu_card">
+				<div class="menu_card_div_img">
+					<img src="https://media.cnn.com/api/v1/images/stellar/prod/220727132408-20220727-new-sprite-bottle.jpg?c=3x4" alt="" class="menu_img">
+				</div>
+				<div class="menu_card_section2">
+					<h5>Газированный напиток Спрайт Sprite</h5>
+					<span>Вы делаете глоток Sprite – и мгновенно ощущаете прилив свежести, а во рту ощущается щекочущие цитрусовые нотки. </span>
+					<span>50 сом</span>
+					<button class="menu_card_section2-button">Купить</button>
+				</div>
+			</div>	
+			<div class="menu_card">
+				<div class="menu_card_div_img">
+					<img src="https://i.pinimg.com/236x/15/88/41/15884183188ab31a5868c394a5d6fb3d.jpg" alt="" class="menu_img">
+				</div>
+				<div class="menu_card_section2">
+					<h5>Десерт</h5>
+					<span> Изысканное сочетание нежного бисквита, нежной кремовой начинки и ароматных фруктов создают идеальное удовольствие для вашего вкусового опыта.</span>
+					<span>150 сом</span>
+					<button class="menu_card_section2-button">Купить</button>
+				</div>
+			</div>
+			<div class="menu_card">
+				<div class="menu_card_div_img">
+					<img src="#" alt="" class="menu_img">
+				</div>
+				<div class="menu_card_section2">
+					<h5></h5>
+					<span></span>
+					<span></span>
+					<button class="menu_card_section2-button"></button>
+				</div>
+			</div>
+			<div class="menu_card">
+				<div class="menu_card_div_img">
+					<img src="#" alt="" class="menu_img">
+				</div>
+				<div class="menu_card_section2">
+					<h5></h5>
+					<span></span>
+					<span></span>
+					<button class="menu_card_section2-button"></button>
+				</div>
+			</div>
+			<div class="menu_card">
+				<div class="menu_card_div_img">
+					<img src="#" alt="" class="menu_img">
+				</div>
+				<div class="menu_card_section2">
+					<h5></h5>
+					<span></span>
+					<span></span>
+					<button class="menu_card_section2-button"></button>
+				</div>
+			</div>
+			<div class="menu_card">
+				<div class="menu_card_div_img">
+					<img src="#" alt="" class="menu_img">
+				</div>
+				<div class="menu_card_section2">
+					<h5></h5>
+					<span></span>
+					<span></span>
+					<button></button>
+				</div>
+			</div>
+			<div class="menu_card">
+				<div class="menu_card_div_img">
+					<img src="#" alt="" class="menu_img">
+				</div>
+				<div class="menu_card_section2">
+					<h5></h5>
+					<span></span>
+					<span></span>
+					<button class="menu_card_section2-button"></button>
+				</div>
+			</div>
+			<div class="menu_card">
+				<div class="menu_card_div_img">
+					<img src="#" alt="" class="menu_img">
+				</div>
+				<div class="menu_card_section2">
+					<h5></h5>
+					<span></span>
+					<span></span>
+					<button class="menu_card_section2-button"></button>
+				</div>
+			</div>
+			<div class="menu_card">
+				<div class="menu_card_div_img">
+					<img src="#" alt="" class="menu_img">
+				</div>
+				<div class="menu_card_section2">
+					<h5></h5>
+					<span></span>
+					<span></span>
+					<button class="menu_card_section2-button"></button>
+				</div>
+			</div>
+			<div class="menu_card">
+				<div class="menu_card_div_img">
+					<img src="#" alt="" class="menu_img">
+				</div>
+				<div class="menu_card_section2">
+					<h5></h5>
+					<span></span>
+					<span></span>
+					<button class="menu_card_section2-button"></button>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</body>
+</html>
